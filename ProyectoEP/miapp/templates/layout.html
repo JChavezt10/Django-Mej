@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+                
+            {% endblock %}
+            |CHAVEZ
+        </title>
+        {% load static %}
+        <link rel="Stylesheet" type="text/css" href="{% static 'css/style.css'%}"/>
+    </head>
+    <body>
+        <header id="logotipo">
+            <div>
+                <img src="{% static 'images/LogoDJango.png' %}" />
+                <h1> Proyecto Web (LP3)</h1>
+            </div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'inicio' %}"> Inicio</a>
+                </li>
+                <li>
+                    <a href="{% url 'saludo' %}"> Mensaje de Saludo</a>
+                </li>
+                <li>
+                    <a href="{% url 'rango' %}"> Mostrar Números [a,b]</a>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <div class="barra">
+            <span class="esquina-izquierda"></span>
+            <span class="relleno-barra"></span>
+            <span class="esquina-derecha"></span>
+        </div>
+
+        <div id="content">
+            <div class="box">
+                {% block content %}
+                    <strong> Contenido en layout (Padre) </strong>
+                {% endblock %}
+            </div>    
+        </div>
+        <footer>
+            UNTELS - Lenguaje de Programación III &copy; Flor Cerdán - {% now "d/m/y h:m:s" %}
+        </footer>
+    </body>
+</html>
