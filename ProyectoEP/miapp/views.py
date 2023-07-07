@@ -6,7 +6,6 @@ def index(request):
                     'Alejandro Hermitaño',
                     'Joan Palomino',
                     'Pierre Bernaola']
-    estudiantes = []
     return render(request, 'index.html', {
         'titulo':'Inicio',
         'mensaje':'Proyecto Web Con DJango',
