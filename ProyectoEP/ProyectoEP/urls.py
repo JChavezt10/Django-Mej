@@ -20,8 +20,8 @@ from miapp import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', views.index, name = "index"),
-    path('inicio/', views.index, name = "inicio"),
-    path('saludo/',views.saludo, name = "saludo"),
-    path('rango/',views.rango,name="rango"),
+    path('cursos/', views.cursos, name = "cursos"),
+    path('crear_cursos/', views.crear_cursos, name = "crear_cursos"),
+    path('carreras/',views.carreras, name = "carreras"),
+    path('crear_carreras/',views.crear_carreras,name="crear_carreras"),
 ]

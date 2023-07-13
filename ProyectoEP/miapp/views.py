@@ -1,30 +1,21 @@
 from django.shortcuts import render, HttpResponse, redirect
 # Create your views here.
 
-def index(request):
-    estudiantes = [ 'Isabella Caballero',
-                    'Alejandro Hermitaño',
-                    'Joan Palomino',
-                    'Pierre Bernaola']
-    return render(request, 'index.html', {
-        'titulo':'Inicio',
-        'mensaje':'Proyecto Web Con DJango',
-        'estudiantes': estudiantes
+def cursos(request):
+    return render(request, 'cursos.html', {
+
     })
 
-def saludo(request):
-    return render(request, 'saludo.html', {
-        'titulo':'Saludo',
-        'autor_saludo':'Mg. Flor Elizabeth Cerdán León'
+def crear_cursos(request):
+    return render(request, 'crear_cursos.html', {
+
     })
 
-def rango(request):
-    a = 10
-    b = 20
-    rango_numeros = range(a,b+1)
-    return render(request,'rango.html',{
-        'titulo':'Rango',
-        'a':a,
-        'b':b,
-        'rango_numeros':rango_numeros
+def carreras(request):
+    return render(request,'carreras.html',{
+
+    })
+def crear_carreras(request):
+    return render(request, 'crear_carreras.html', {
+
     })
